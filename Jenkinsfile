@@ -20,11 +20,11 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Desplegar') {
-            steps {
-                sh 'mvn deploy'
-            }
-        }
+        stage('Empaquetar') {
+    steps {
+        sh 'mvn package'
+    }
+}
     }
     post {
         success {
